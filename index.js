@@ -44,7 +44,7 @@ buttonNewTask.onclick = event => {
 
         buttonChecked.onclick = event => {
             event.preventDefault()
-            textElement.style.textDecoration = 'line-through'
+            textElement.classList.toggle("line-through")
         }
     } 
 }
