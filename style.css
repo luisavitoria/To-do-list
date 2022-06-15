@@ -98,7 +98,7 @@ button:hover {
     align-items: center;
 }
 
-.list-tasks ul li p .line-through {
+.list-tasks ul li .line-through {
     text-decoration: line-through;
 }
 
