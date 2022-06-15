@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #63585E;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    height: 100vh;
+    font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #B9C0DA;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    overflow-y:auto;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container .new-task {
+    width: 80%;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 2rem;
+}
+
+input {
+    width: 75%;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.15);
+    font-family: sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn-newTask {
+    width: 20%;
+    padding: 0.5rem;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.btn-newTask::before {
+    content: 'add new task';
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.list-tasks {
+    width: 80%;
+    background-color: #B4B8C5;
+    border-radius: 5px;
+   display: none;
+}
+
+.list-tasks ul {
+    list-style-position: inside;
+    list-style-type: square;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.list-tasks ul li {
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.list-tasks ul li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin-right: 0.5rem;
+    background-color: #63585E;
+}
+
+.list-tasks ul li .div-btn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.list-tasks ul li button {
+    width: 20px;
+    margin-left: 1rem;
+    border: none;
+    background-color: #B4B8C5;
+    cursor: pointer;
+}
+
+.list-tasks ul li button img {
+    width: 80%;
+}
+
+.list-tasks ul li .btn-checked img{
+    width: 110%;
+}
+
+
+
+/*media queries*/
+
+@media (max-width:800px) {
+    .container {
+        width: 80%;
+        padding: 1rem 0 0 0;
+    }
+
+    .btn-newTask::before {
+        content: '';
+    }
+    .btn-newTask::after {
+        content: "+";
+    }
+
+    .list-tasks ul li {
+        font-size: 1rem;
+    }
+}
