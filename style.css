@@ -98,6 +98,10 @@ button:hover {
     align-items: center;
 }
 
+.list-tasks ul li p .line-through {
+    text-decoration: line-through;
+}
+
 .list-tasks ul li::before {
     content: '';
     width: 7px;
